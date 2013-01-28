@@ -5,7 +5,7 @@ use warnings;
 #Two files are needed: 1) list of variations 2) 3did interactome file
 if ($#ARGV != 1) {die "Program used with parameters [list of variations] [interactome]\n";}
 
-#TODO: update description and implement all elow listed features
+#TODO: update description and implement all below listed features
 #query interface from 3did
 #	print structuraly resolved interactions
 #	interpret interfaces
@@ -73,7 +73,8 @@ open(CTn, "SNVmap-CTnode");
 open(RES, ">SNVmap-AAstats.out");
 open(VARS, ">SNVmap-SNVstats.out");
 
-#read in interactome
+#read in interactome: 3did, Jail? etc. 
+#first round of input analysis
 my @interactome=open_file($ARGV[1]);
 my(%contacts,%residues);
 my(%intfc,%ifc,%intfcgv,%ifcgv);#interface counts
