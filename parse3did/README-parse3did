@@ -1,0 +1,11 @@
+parse3did.pl
+parse3did-0.1a.pl
+parse3did-0.1b.pl
+	first working with mapping of pdb IDs to unirpto IDs
+parse3did-0.1c.pl
+	corrected interprettion of special residue numbering in PDB that uses letter to indicate insertions before 1st residue 
+	added uniprot mapping for both interacting chains!!!!!!!
+	print DDI graph
+parse3did-0.2.pl
+	interpret interfaces
+	print IIN graph

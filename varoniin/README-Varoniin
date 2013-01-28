@@ -1,0 +1,62 @@
+I. Versions
+Varoniin-0.1.pl
+	wersja robocza
+Varoniin-0.1a.pl
+	wersja robocza
+Varoniin-0.2.pl
+	pierwsza wersja pelna. Mapowanie GV na 3did
+	drukowanie grafu i atrybutow
+Varoniin-0.3.pl
+	speed up by analysing only targets from variation list
+Varoniin-0.4.pl
+	adding variant type tag
+	print binary variables for Variants: in/out interface, yes/no in contact with other GV, yes/no in proximity to other variant (on same interface)
+	disease hashed separately for residues and for interfaces - to be developed further
+	corrected some issues
+	header in variant printout
+
+
+II. Description
+
+For each of identified domain - domain interactions. 
+	If they can occure at the same time (found in same individual):
+		-calculate distance between residues. Can double variation cancel each individual effect out?
+
+
+1. Parse 3did and others
+2. parse pdb - uniprot annotation and add to parsed contacts to store one big table
+3. possibly - parse pdb - pfam mapping (for comparisons with pfam definitions in 3did or for other interaction maps)
+
+map variants:
+	for given uniprotID/entrezID{
+		if variant is in contact (varAA number is same as AA in cmap of specific interface){
+			-count contacts for given AA
+			-count contacts classified into groups (ss, ms, mm)
+			-count number of contacts with residues that are also variants (in general)
+			-count number of contacts with residues that are also variants (in same individual)
+			-count number of SNPs within specific interface separately on one or other site
+
+	if hotspots are known{
+		calculate  distance between varAA and hotspot
+		if(d< threshold){
+			-assign feature: hotspot_neigh=1
+
+
+Prepare edges and nodes attribute files (Cytoscape)
+
+1. Network of interfaces with mapped variants
+For each interface contact as an edge (1..N)
+
+Edge attributes
+	SNPs	
+	load_g - total number of SNPs mapped on particular interface
+	0 - no snps mapped on contacts
+	1 - SNPs mapped on one partner residue
+	2 - SNP mapped on interface that contain other SNPs
+	3 - SNPs mapped on both partners
+
+Node attributes	
+	load_1 - number of SNPs mapped on 1st face
+	load_2 - number of SNPs mapped on 2nd face
+
+

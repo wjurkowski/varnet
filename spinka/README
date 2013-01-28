@@ -1,0 +1,24 @@
+Program mapping SNV on Domain Interaction networks
+
+Versions
+
+only for sin and pin (Wang et al.)
+	spinka-0.1.pl	- dev
+	spinka-0.2.pl	- dev
+	spinka-0.3.pl
+		version applied in v1
+	spinka-0.3a.pl
+		3did parsing removed - it is not used in DDI 
+	spinka-0.4.pl
+		node and ege attributes for Cytoscape
+		code cleaned up
+		PIN printing corrected: previously only one node of an edge was checked
+		new input format
+	spinka-0.4a.pl (spinka-sin.pl)	
+		solved problem of both nodes in an edge having the same name. name are taken directly from hgnc mapping file (entrez->name)
+
+universal for any interactome input file
+	spinka-0.5.pl
+		removed PIN
+		entrez replaced with gene symbols	
+	
