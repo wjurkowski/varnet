@@ -1,0 +1,1 @@
+Programs mapping genetic variations (SNV, CNV) on molecular networks (PPI, DIN, IIN). Various interactome data are available.
